@@ -39,6 +39,8 @@ class ClosedHashTableTest {
 		assertEquals(true, tabla.remove(24));
 		assertEquals(true, tabla.remove(3));
 		System.out.println(tabla.toString());
+		assertEquals(true, tabla.add(15));
+		System.out.println(tabla.toString());
 
 	}
 }

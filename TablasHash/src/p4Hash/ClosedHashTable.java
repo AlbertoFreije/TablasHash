@@ -122,7 +122,7 @@ public class ClosedHashTable<T> extends AbstractHash<T> {
 
 		while (intento <= hashSize) {
 
-			if (tabla[pos].getStatus() == 0 || tabla[pos].getStatus() == 2) {
+			if (tabla[pos].getStatus() == 0 || tabla[pos].getStatus() == -1) {
 				if (numElems < hashSize) {
 					tabla[pos].setInfo(elem);
 
@@ -160,7 +160,7 @@ public class ClosedHashTable<T> extends AbstractHash<T> {
 					return null;
 
 				}
-				if (tabla[posicion].getInfo() != elem || tabla[posicion].getStatus() == 2) {
+				if (tabla[posicion].getInfo() != elem || tabla[posicion].getStatus() == -1) {
 
 					iteracion++;
 					posicion = funcionDistribucion(elem, iteracion);
@@ -194,7 +194,7 @@ public class ClosedHashTable<T> extends AbstractHash<T> {
 		
 		int pos = funcionDistribucion(elem, iteracion);
 		
-		while(tabla[pos].getStatus()==1 && tabla[pos].getInfo()!=elem) {
+		while(tabla[pos].getStatus()!=0 && tabla[pos].getInfo()!=elem) {
 			iteracion++;
 			pos =  funcionDistribucion(elem, iteracion);
 		}
