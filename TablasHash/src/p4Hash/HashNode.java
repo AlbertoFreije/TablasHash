@@ -16,8 +16,10 @@ public class HashNode<T> {
 	public static final int LLENO = 1;
 
 	public HashNode () {
-		this.info = null;
-		status = VACIO;
+		
+		this.status=VACIO;
+		this.info=null;
+		
 	}
 	
 	public T getInfo() {
@@ -27,13 +29,15 @@ public class HashNode<T> {
 	}
 	
 	public void remove (){
-		this.status = BORRADO;	
+		
+		this.status = BORRADO;
+		
 	}
 	
 	public void setInfo(T elem){
 		
 		this.info = elem;
-		this.status= LLENO;
+		this.status = LLENO;
 		
 	}
 	

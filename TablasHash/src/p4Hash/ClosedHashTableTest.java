@@ -11,13 +11,21 @@ class ClosedHashTableTest {
 		
 		ClosedHashTable<Integer> tabla = new ClosedHashTable<>(13, 0);
 		assertEquals(true, tabla.add(5));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(8));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(11));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(9));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(5));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(7));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(8));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(6));
+		System.out.println(tabla.toString());
 		assertEquals(true, tabla.add(14));
 		System.out.println(tabla.toString());
 		

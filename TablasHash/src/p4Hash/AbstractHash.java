@@ -6,10 +6,10 @@ package p4Hash;
  *
  * @param <T>
  */
-public abstract class AbstractHash <T>{ //vital elegir la mejor estrategia O(1)
+public abstract class AbstractHash <T>{
 
 	/**
-	 * Devuelve el numero de elementos que contiene la tabla Hash en el momento de la invocacion tamaño tiene que ser un numero primo
+	 * Devuelve el numero de elementos que contiene la tabla Hash en el momento de la invocacion
 	 */
 	abstract public int getNumOfElems();
 
@@ -58,9 +58,9 @@ public abstract class AbstractHash <T>{ //vital elegir la mejor estrategia O(1)
 	 * Calcula el resultado de aplicar la funcion hash basada en modulo, sobre el parametro  
 	 * Utiliza hashCode() y convierte posibles negativos a positivos 
 	 */
-	protected int fHash(T elem){ // fHash basada en MODULO...  fHash(clave)%B
-		int position=elem.hashCode()%getSize();  //hashcode puede dar un numero negativo
-		return position<0 ? position+getSize() : position; //si es negativo le sumo el tamaño de la tabla
+	protected int fHash(T elem){ // fHash basada en MODULO... 
+		int position=elem.hashCode()%getSize(); 
+		return position<0 ? position+getSize() : position; 
 	} 
 
 	/**
